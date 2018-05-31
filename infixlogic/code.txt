@@ -1,0 +1,47 @@
+1
+
+S 0 -> S0 _ >
+S 1 -> S1 _ >
+BACK 0 -> BACK 0 <
+BACK 1 -> BACK 1 <
+BACK _ -> AC _ >
+
+S0 0 -> S00 _ >
+S0 1 -> S01 _ >
+S0 _ -> print1 _ >
+
+S1 0 -> S10 _ >
+S1 1 -> S11 _ >
+S1 _ -> print1 _ >
+
+S10 0 -> S100 _ >
+S10 1 -> S101 _ >
+S10 _ -> print10 _ >
+
+S11 0 -> S110 _ >
+S11 1 -> S111 _ >
+S11 _ -> print110 _ >
+
+S100 0 -> S1000 _ >
+S100 1 -> S1001 _ >
+S100 _ -> print11000 _ >
+
+S101 0 -> S1010 _ >
+S101 1 -> S1011 _ >
+S101 _ -> print1111000 _ >
+
+print1 _ -> BACK 1 <
+
+
+print10 _ -> print0 1 >
+print0 _ -> BACK 0 <
+
+print110 _ -> print10 1 >
+
+print11000 _ -> print1000 1 >
+print1000 _ -> print000 1 >
+print000 _ -> print00 0 >
+print00 _ -> print0 0 >
+
+print1111000 _ -> print111000 1 >
+print111000 _ -> print11000 1 >
