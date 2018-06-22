@@ -6,7 +6,7 @@
 - *string*: `java.lang.String`
 - *state*: *string*
 - *letter*: *srting*
-- *state*: `[^ | * | >]`
+- *direction*: `[^ | < | >]`
 
 ### Входной формат одноленточной машины
 > start: *string*
